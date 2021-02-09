@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/373499fe04.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Validator Form Page</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="wrapper">
+        <form action="#" class="form-container">
+          <h1>Welcome!</h1>
+
+          <article class="input-area">
+            <div class="input-form">
+              <label for="email">
+                <i class="fas fa-user"></i>
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@example.com"
+              />
+            </div>
+
+            <div class="input-form">
+              <label for="password">
+                <i class="fas fa-lock"></i>
+              </label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="********"
+              />
+            </div>
+          </article>
+
+          <div class="divider"></div>
+
+          <article class="validator-area">
+            <ul>
+              <li id="lower-upper">
+                <span><i class="fas fa-times-circle"></i></span>
+                Lower and Upper Case
+              </li>
+              <li id="numbers">
+                <span><i class="fas fa-times-circle"></i></span>
+                Number (0 - 9)
+              </li>
+              <li id="special-characters">
+                <span><i class="fas fa-times-circle"></i></span>
+                Special Character
+              </li>
+              <li id="digits">
+                <span><i class="fas fa-times-circle"></i></span>
+                At least 8 digits
+              </li>
+            </ul>
+          </article>
+
+          <input
+            disabled
+            class="btn"
+            id="btn"
+            type="submit"
+            value="Create Account"
+          />
+        </form>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
