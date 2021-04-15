@@ -30,28 +30,28 @@ passwordEl.addEventListener('keyup', event => {
   toggleButton(isValidate);
 });
 
-function validateLowerUpperCase(value) {
+const validateLowerUpperCase = value => {
   const upper = RegExp('[A-Z]');
   const lower = RegExp('[a-z]');
 
   return value.match(lower) && value.match(upper);
-}
+};
 
-function validateNumbers(value) {
+const validateNumbers = value => {
   const regex = /\d/g;
   return value.match(regex);
-}
+};
 
-function validateSpecialCharacters(value) {
+const validateSpecialCharacters = value => {
   const regex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
   return value.match(regex);
-}
+};
 
-function validateDigits(value) {
+const validateDigits = value => {
   return value.length >= 8;
-}
+};
 
-function toggleRequirements(item, isActive) {
+const toggleRequirements = (item, isActive) => {
   const icon = item.getElementsByTagName('i')[0];
 
   if (isActive) {
@@ -63,12 +63,12 @@ function toggleRequirements(item, isActive) {
     icon.classList.add('fa-times-circle');
     icon.classList.remove('fa-check');
   }
-}
+};
 
-function toggleButton(isFormValidated) {
+const toggleButton = isFormValidated => {
   if (isFormValidated) {
     buttonEl.removeAttribute('disabled');
   } else {
     buttonEl.setAttribute('disabled', '');
   }
-}
+};
